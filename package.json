@@ -8,8 +8,13 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@faker-js/faker": "^9.0.3",
     "@playwright/test": "^1.48.1",
     "@types/node": "^22.7.9",
-    "ajv": "^8.17.1"
+    "ajv": "^8.17.1",
+    "faker": "^6.6.6"
+  },
+  "dependencies": {
+    "ajv-formats": "^3.0.1"
   }
 }

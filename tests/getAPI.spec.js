@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 const { request } = require('http');
 import Ajv from 'ajv'
 
-test.describe('Post methods authentication test',()=>{
+test.describe('Get methods authentication test',()=>{
 
     test('should retrieve the list of bookings', {tag:'@get'}, async ({ request }) => {
 
@@ -26,6 +26,11 @@ test.describe('Post methods authentication test',()=>{
     //   expect(typeof responseBody[0].bookingid).toBe('number');
     // }
 
+
+
+
+
+    
     const schema = {
         type: 'array', // The response should be an array of objects
         items: {

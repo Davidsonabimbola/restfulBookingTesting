@@ -1,6 +1,8 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 const { request } = require('http');
+//const Ajv = require('ajv');
+
 import Ajv from 'ajv'
 //const Ajv = require("ajv")
 
@@ -44,6 +46,11 @@ test('retrieval of token', {tag:'@token'}, async({request})=>{
     // ******Schema validation
 
 
+
+
+
+
+
     // Define the expected schema
     const schema = {
         type: 'object',
@@ -56,6 +63,7 @@ test('retrieval of token', {tag:'@token'}, async({request})=>{
 
       // Validate the schema using ajv
       const ajv =  new Ajv()
+      //const ajv =  new Ajv()
     const validate = ajv.compile(schema);
     const valid = validate(responseBody);
 
