@@ -7,7 +7,7 @@ test.describe('Get methods authentication test',()=>{
 
     test('should retrieve the list of bookings', {tag:'@get'}, async ({ request }) => {
 
-        const response = await request.get('https://restful-booker.herokuapp.com/booking');
+        const response = await request.get('/booking');
 
         expect(response.status()).toBe(200);
 
@@ -30,7 +30,7 @@ test.describe('Get methods authentication test',()=>{
 
 
 
-    
+
     const schema = {
         type: 'array', // The response should be an array of objects
         items: {

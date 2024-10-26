@@ -4,7 +4,6 @@ const { request } = require('http');
 const { faker } = require('@faker-js/faker');
 const Ajv = require('ajv');
 
-//import Ajv from 'ajv'
 const addFormats = require('ajv-formats');
 
 
@@ -16,7 +15,7 @@ test.describe('Patch methods for partial update',()=>{
 
         const bookingId = 3;
 
-const response = await request.patch(`https://restful-booker.herokuapp.com/booking/${bookingId}`,
+const response = await request.patch(`/booking/${bookingId}`,
 
 
 

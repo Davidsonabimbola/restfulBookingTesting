@@ -5,6 +5,7 @@ const Ajv = require('ajv');
 //import Ajv from 'ajv'
 //import addFormats from 'ajv-formats';
 const addFormats = require('ajv-formats');
+const baseURL = require('../pages/APIconfig')
 
 
 
@@ -35,7 +36,8 @@ test.describe('Update booking with PUT request',()=>{
         const bookingId = 2;
 
 
-        const response = await request.put(`https://restful-booker.herokuapp.com/booking/${bookingId}`,
+        // const response = await request.put(`${baseURL}/booking/${bookingId}`,
+               const response = await request.put(`/booking/${bookingId}`,
 
 
 {

@@ -4,6 +4,7 @@ const { request } = require('http');
 //const Ajv = require('ajv');
 
 import Ajv from 'ajv'
+//const login = require('../pages/APIconfig')
 //const Ajv = require("ajv")
 
 test.describe('Post methods authentication test',()=>{
@@ -11,10 +12,9 @@ test.describe('Post methods authentication test',()=>{
 
 test('retrieval of token', {tag:'@token'}, async({request})=>{
 
-
-
     // the method and url contains the header and data
-    const response = await request.post('https://restful-booker.herokuapp.com/auth',
+    const response = await request.post('/auth',
+
 
          {
 
@@ -74,20 +74,3 @@ test('retrieval of token', {tag:'@token'}, async({request})=>{
 })
 
 
-
-// tests/authentication.spec.js
-// const { test, expect } = require('@playwright/test');
-// const { AuthAPI } = require('../pages/PostAPI');
-
-// test.describe('Post methods authentication test', () => {
-//   test('retrieval of token', { tag: '@token' }, async ({ request }) => {
-//     const authAPI = new AuthAPI(request);
-
-//     // Retrieve the token
-//     const token = await authAPI.getAuthToken('admin', 'password123');
-    
-//     // Check that the token is retrieved
-//     expect(token).toBeTruthy();
-//     console.log('Token:', token);
-//   });
-// });
