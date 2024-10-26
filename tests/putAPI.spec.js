@@ -34,6 +34,7 @@ test.describe('Update booking with PUT request',()=>{
       const auth = 'Basic YWRtaW46cGFzc3dvcmQxMjM='
         const bookingId = 2;
 
+
         const response = await request.put(`https://restful-booker.herokuapp.com/booking/${bookingId}`,
 
 

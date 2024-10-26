@@ -1,4 +1,4 @@
-// @ts-check
+// // @ts-check
 const { test, expect } = require('@playwright/test');
 const { request } = require('http');
 //const Ajv = require('ajv');
@@ -46,11 +46,6 @@ test('retrieval of token', {tag:'@token'}, async({request})=>{
     // ******Schema validation
 
 
-
-
-
-
-
     // Define the expected schema
     const schema = {
         type: 'object',
@@ -77,3 +72,22 @@ test('retrieval of token', {tag:'@token'}, async({request})=>{
 })
 
 })
+
+
+
+// tests/authentication.spec.js
+// const { test, expect } = require('@playwright/test');
+// const { AuthAPI } = require('../pages/PostAPI');
+
+// test.describe('Post methods authentication test', () => {
+//   test('retrieval of token', { tag: '@token' }, async ({ request }) => {
+//     const authAPI = new AuthAPI(request);
+
+//     // Retrieve the token
+//     const token = await authAPI.getAuthToken('admin', 'password123');
+    
+//     // Check that the token is retrieved
+//     expect(token).toBeTruthy();
+//     console.log('Token:', token);
+//   });
+// });
